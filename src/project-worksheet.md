@@ -46,7 +46,11 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Header | This will render the nav |
 | Footer | This will render the footer |
 | Teams | This will be the component that renders all teams and rosters |
+| Team | This will be the component that renders a specific team|
+| Team Details | This will be the component that renders a specific team and roster |
 | Players | This will render all players in NHL |
+| Player | This will render individual player in NHL |
+| Player Details | This will render individual player statistics |
 
 
 
@@ -66,7 +70,7 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Configuring Player Component | High | 1.5hrs| N/A | N/A |
 | Configuring Player Details Component | High | 1.5hrs| N/A | N/A |
 
-| Total | H | 28hrs| hrs | hrs |
+| Total | H | 28hrs| N/A | N/A |
 
 ## Code Snippet
 
