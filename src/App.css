@@ -1,7 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Calligraffitti|Fugaz+One|Montserrat+Subrayada:400,700|Montserrat:400,500,600,800|Oleo+Script|Vast+Shadow&display=swap');
+
 .App {
   text-align: center;
 }
-
+h1 {
+  font-family: 'montserrat';
+  font-size: 5em;
+  color: white;
+  text-shadow: 1px 1px black;
+  /* border: 1px solid white; */
+  margin: 0;
+  font-style: italic;
+}
+h3 {
+  /* border: 1px solid white; */
+  font-family: 'montserrat';
+  font-size: 2.5em;
+  color: white;
+  text-shadow: 1px 1px black;
+}
+.homeContainer {
+  /* border: 1px solid white; */
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.5);
+  width: 80%;
+  margin: 0 auto;
+  max-width: 900px;
+}
+.Teams {
+  text-decoration: none;
+  /* border: 1px solid black; */
+  height: 150px;
+  line-height: 150px;
+  color: white;
+  font-family: 'montserrat';
+  font-size: 1.5em;
+  border-bottom: 1px solid rgba(255,255,255,0.4)
+}
+.Players {
+  text-decoration: none;
+  /* border: 1px solid black; */
+  height: 150px;
+  line-height: 150px;
+  color: white;
+  font-family: 'montserrat';
+  font-size: 1.5em;
+}
+.Teams:hover {
+  background-color: rgba(0,0,0,0.6);
+  transition: background-color, 0.5s;
+}
+.Players:hover {
+  background-color: rgba(0,0,0,0.6);
+  transition: background-color, 0.5s;
+}
+body {
+  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1566913933/HockeyRink_az1pbn.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -22,13 +81,4 @@
 
 .App-link {
   color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

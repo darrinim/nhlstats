@@ -17,8 +17,6 @@ class App extends React.Component {
     }
   }
 
-// http://statsapi.web.nhl.com/api/v1/people/8470834
-
   makeApiCallTeam = async () => {
     const response = await axios.get('http://statsapi.web.nhl.com/api/v1/teams?expand=team.roster')
     // console.table(response.data.teams);
@@ -27,28 +25,6 @@ class App extends React.Component {
 
     })
   }
-
-  // console.log(response.data.stats[0].splits[0].stat);
-
-
-
-// <AllPlayers
-//   roster={this.state.roster}
-// />
-// <h1>NHL Stats</h1>
-// <Homepage />
-// <AllTeams
-//   teams={this.state.teams}
-// />
-
-
-// <Homepage />
-// <AllTeams
-//   teams={this.state.teams}
-// />
-// <AllPlayers
-// roster={this.state.teams}
-// />
 
 
 
@@ -61,20 +37,29 @@ class App extends React.Component {
 
     return(
       <div className="App">
-        <h1>NHL Stats</h1>
-      <Link to="/allTeams">Teams</Link>
-      <Link to="/AllPlayers">Players</Link>
-        <Switch>
-          <Route
-            path='/allTeams'
-            render={(props) => <AllTeams {...props} teams={this.state.teams} />}
-          />
-          <Route
-            path='/AllPlayers'
-            render={(props) => <AllPlayers {...props} roster={this.state.teams}/>}
-            />
+        <h1>The Show</h1>
+        <h3>NHL Stats</h3>
+        <div className="homeContainer">
+          <Link
+            to="/allTeams"
+            className='Teams'
+            >Teams</Link>
+            <Link
+              to="/AllPlayers"
+              className='Players'
+              >Players</Link>
+        </div>
+              <Switch>
+                <Route
+                  path='/allTeams'
+                    render={(props) => <AllTeams {...props} teams={this.state.teams} />}
+                />
+                <Route
+                  path='/AllPlayers'
+                  render={(props) => <AllPlayers {...props} roster={this.state.teams}/>}
+                />
 
-        </Switch>
+              </Switch>
 
 
       </div>
