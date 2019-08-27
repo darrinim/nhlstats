@@ -1,9 +1,5 @@
 import React from 'react'
-import Team from './Team'
-import AllTeams from './AllTeams'
 import Roster from './Roster'
-import { Route, Switch, Link } from 'react-router-dom'
-
 
 
 

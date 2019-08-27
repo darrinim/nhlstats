@@ -1,24 +1,20 @@
 import React from 'react'
-import Team from './Team'
-import { Route, Switch, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
+import './AllTeams.css';
 
 
 const AllTeams = (props) => {
   console.log(props);
 
-  const mappedAllTeams = props.teams.map((team) => {
+  const mappedTeamLink = props.teams.map((team) => {
     return (
-      <div>
-        <Team
-          team={team}/>
-      </div>
+      <Link to={`/teams/${team.id}`}>{team.name}</Link>
     )
   })
 
-
   return (
     <div>
-      {mappedAllTeams}
+      {mappedTeamLink}
     </div>
   )
 }

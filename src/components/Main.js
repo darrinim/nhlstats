@@ -14,10 +14,14 @@ function Main() {
         component={Homepage} />
         <Route path='/AllTeams'
         component={AllTeams} />
-        <Route path='/TeamsFullRoster'
-        component={TeamsFullRoster} />
+        <Route path='/Team'
+        component={Team} />
         <Route path='/Roster'
         component={Roster} />
+        <Route path='/TeamPlayer'
+        component={TeamPlayer} />
+        <Route path='/AllPlayers'
+        component={AllPlayers} />
       </Switch>
     </main>
   )

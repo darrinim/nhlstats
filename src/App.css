@@ -2,13 +2,19 @@
 
 .App {
   text-align: center;
+  height: 100vh;
+  overflow: auto;
 }
+
 h1 {
   font-family: 'montserrat';
   font-size: 5em;
   color: white;
-  text-shadow: 1px 1px black;
-  /* border: 1px solid white; */
+  text-shadow:
+    0 0 20px rgba(0,0,0,.5),
+    0 0 15px rgba(0,0,0,.5),
+    0 0 10px rgba(0,0,0,.5),
+    0 0 5px rgba(0,0,0,.5);
   margin: 0;
   font-style: italic;
 }
@@ -36,7 +42,8 @@ h3 {
   color: white;
   font-family: 'montserrat';
   font-size: 1.5em;
-  border-bottom: 1px solid rgba(255,255,255,0.4)
+  border-bottom: 1px solid rgba(255,255,255,0.4);
+  cursor: pointer;
 }
 .Players {
   text-decoration: none;
@@ -46,6 +53,7 @@ h3 {
   color: white;
   font-family: 'montserrat';
   font-size: 1.5em;
+  cursor: pointer;
 }
 .Teams:hover {
   background-color: rgba(0,0,0,0.6);
@@ -53,6 +61,21 @@ h3 {
 }
 .Players:hover {
   background-color: rgba(0,0,0,0.6);
+  transition: background-color, 0.5s;
+}
+.TeamClick {
+  border: 1px solid black;
+  height: 80px;
+  line-height: 80px;
+  font-size: 1.5em;
+  width: 60%;
+  margin: 10px auto;
+  background-color: rgba(0,0,0,0.6);
+  color: white;
+  cursor: pointer;
+}
+.TeamClick:hover {
+  background-color: rgba(0,0,0,0.5);
   transition: background-color, 0.5s;
 }
 body {
