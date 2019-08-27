@@ -1,16 +1,16 @@
 import React from 'react'
 import Team from './Team'
-// import TeamsFullRoster from './TeamsFullRoster'
+import { Route, Switch, Link } from 'react-router-dom'
+
 
 const AllTeams = (props) => {
-  // console.log(props);
+  console.log(props);
 
   const mappedAllTeams = props.teams.map((team) => {
     return (
       <div>
         <Team
-          team={team}
-        />
+          team={team}/>
       </div>
     )
   })

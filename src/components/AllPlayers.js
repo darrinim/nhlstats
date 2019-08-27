@@ -2,19 +2,22 @@ import React from 'react'
 import Team from './Team'
 import AllTeams from './AllTeams'
 import Roster from './Roster'
+import { Route, Switch, Link } from 'react-router-dom'
 
 
 
 
-const TeamsFullRoster = (props) => {
-// console.log('this is TeamsFullRoster')
+const AllPlayers = (props) => {
+console.log('this is AllPlayers', props)
 
 
 let mappedRosters = props.roster.map((roster, i) => {
-  // console.log('this is TeamsFullRoster', props.roster[i].roster.roster)
+  // console.log('this is AllPlayers', props.roster[i].roster.roster)
   return (
     <div>
-      <Roster />
+      <Roster
+        roster={roster.roster.roster}
+      />
     </div>
   )
 })
@@ -37,4 +40,4 @@ let mappedRosters = props.roster.map((roster, i) => {
 
 
 
-export default TeamsFullRoster
+export default AllPlayers

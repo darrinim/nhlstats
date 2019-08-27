@@ -1,19 +1,16 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 
 function Homepage() {
+
+
+
+
   return(
-
-
-
-
-    <div>
-      <div
-        className="selectTeams"
-        onClick=
-        >Teams</div>
-      <div className="selectPlayers">Players</div>
-    </div>
+    <React.Fragment>
+      <div><Link to='/AllTeams'>Teams</Link></div>
+    </React.Fragment>
   )
 }
 
