@@ -33,22 +33,29 @@ class TeamPlayer extends React.Component {
     // console.log(this.state.stats);
     const{playerInfo, player, stats} = this.props
     return(
-      <React.Fragment>
+      <div className="SinglePlayerContainer">
       <div
+        className="SinglePlayer"
         onClick={this.getPlayerAbout}
-      >{player.person.fullName}</div>
-      <div>{player.position.name}</div>
+      >{player.person.fullName} <br/> {player.position.name}</div>
+
       {playerInfo ?
-        <div>
+        <div className="PlayerBio">
+          <p className="BioStats">Player Bio</p>
           <p>Birth Date: {playerInfo.birthDate}</p>
           <p>Age: {playerInfo.currentAge}</p>
           <p>Height: {playerInfo.height}</p>
+          <p>Weight: {playerInfo.weight}</p>
           <p>Nationality: {playerInfo.nationality}</p>
+          <p>Born In: {playerInfo.birthCity}</p>
+          <p>Jersey Number: {playerInfo.primaryNumber}</p>
+          <p>Shoots/Catches: {playerInfo.shootsCatches}</p>
         </div>
         : null
       }
       {stats ?
-        <div>
+        <div className="PlayerStats">
+          <p className="BioStats">Player Stats</p>
           <p>Goals: {stats.goals}</p>
           <p>Assists: {stats.assists}</p>
           <p>Plus/Minus: {stats.plusMinus}</p>
@@ -60,7 +67,7 @@ class TeamPlayer extends React.Component {
         </div>
         : null
       }
-      </React.Fragment>
+      </div>
     )
   }
 }
