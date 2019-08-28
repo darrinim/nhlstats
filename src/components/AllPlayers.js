@@ -1,9 +1,13 @@
 import React from 'react';
 import Roster from './Roster';
+import { withRouter } from 'react-router-dom'
+
+
 
 
 
 const AllPlayers = (props) => {
+
   console.log(props)
   let mappedRosters = props.roster.map((roster, i) => {
     console.log(props.roster[i])

@@ -29,7 +29,14 @@ class AllTeams extends React.Component {
        </div>
      )
    })
-   const displaying = this.state.clicked && <Roster details={this.state.roster.roster.roster} oneTeam={true}/>
+   const displaying = this.state.clicked && (
+       <div>
+       <button
+         onClick={()=> this.handleClick()}
+       >Back</button>
+          <Roster details={this.state.roster.roster.roster} oneTeam={true} handleClick={this.handleClick}/>
+       </div>
+   )
    return (
      <div className='TeamContainer'>
        {mappedTeamLink}

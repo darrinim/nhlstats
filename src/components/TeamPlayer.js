@@ -15,25 +15,30 @@ class TeamPlayer extends React.Component {
 
 
     const statsCall = await axios.get(`http://statsapi.web.nhl.com/${this.props.player.person.link}/stats?stats=statsSingleSeason&season=20172018`)
-
-    this.setState({
-      playerInfo: response.data.people[0],
-      stats: statsCall.data.stats[0].splits[0].stat
-    })
+    // send up current player
+    this.props.setCurrentPlayer({
+      player: this.props.player,
+      stats: statsCall.data.stats[0].splits[0].stat,
+      playerInfo: response.data.people[0]
+    });
+    // this.setState({
+    //   playerInfo: response.data.people[0],
+    //   stats: statsCall.data.stats[0].splits[0].stat
+    // })
   }
 
 
   render() {
-    // console.log(this.props)
+    console.log(this.props)
     // console.log(this.state.stats);
-    const{playerInfo, stats} = this.state
+    const{playerInfo, player, stats} = this.props
     return(
       <React.Fragment>
       <div
         onClick={this.getPlayerAbout}
-      >{this.props.player.person.fullName}</div>
-      <div>{this.props.player.position.name}</div>
-      {Object.keys(playerInfo).length > 0 ?
+      >{player.person.fullName}</div>
+      <div>{player.position.name}</div>
+      {playerInfo ?
         <div>
           <p>Birth Date: {playerInfo.birthDate}</p>
           <p>Age: {playerInfo.currentAge}</p>
@@ -42,7 +47,7 @@ class TeamPlayer extends React.Component {
         </div>
         : null
       }
-      {Object.keys(stats).length > 0 ?
+      {stats ?
         <div>
           <p>Goals: {stats.goals}</p>
           <p>Assists: {stats.assists}</p>
