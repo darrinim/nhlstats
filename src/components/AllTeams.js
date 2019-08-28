@@ -1,24 +1,41 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 import './AllTeams.css';
+import Roster from './Roster'
+class AllTeams extends React.Component {
+ state = {
+   roster: [],
+   clicked: false
+ }
 
+ handleClick = (team) => {
+   this.setState({
+     clicked: !this.state.clicked,
+     roster: team
+   })
+ }
 
-const AllTeams = (props) => {
-  console.log(props);
-
-  const mappedTeamLink = props.teams.map((team) => {
-    return (
-      <Link to={`/teams/${team.id}`}>{team.name}</Link>
-    )
-  })
-
-  return (
-    <div>
-      {mappedTeamLink}
-    </div>
-  )
+ render() {
+   console.log(this.props)
+   console.log(this.state)
+   const mappedTeamLink = this.state.clicked === false && this.props.teams.map((team) => {
+     return (
+       <div>
+         <div
+           className='AllTeamSelect'
+           onClick={() => this.handleClick(team)}
+         >
+           {team.name}
+         </div>
+       </div>
+     )
+   })
+   const displaying = this.state.clicked && <Roster details={this.state.roster.roster.roster} oneTeam={true}/>
+   return (
+     <div className='TeamContainer'>
+       {mappedTeamLink}
+       {displaying}
+     </div>
+   )
+ }
 }
-
-
-
 export default AllTeams

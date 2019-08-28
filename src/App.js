@@ -30,13 +30,39 @@ class App extends React.Component {
     this.makeApiCallTeam()
   }
 
+  // <Link
+  //   to="/allTeams"
+  //   className='Teams'
+  //   >Teams</Link>
+  //   <Link
+  //     to="/AllPlayers"
+  //     className='Players'
+  //     >Players</Link>
+
+  teamsClick = () => {
+    // console.log(this.props.team.roster.roster)
+    console.log('teams clicked')
+    this.setState({
+      cPlayers: false
+    })
+  }
+  playersClick = () => {
+    // console.log(this.props.team.roster.roster)
+    console.log('players clicked')
+    this.setState({
+      cTeams: false
+    })
+  }
+
 
 
   render() {
-
     let RTeam = <Link to="/allTeams"  className='Teams' onClick={this.teamsClick}>Teams</Link>
 
     let RPlayers = <Link to="/AllPlayers" className='Players' onClick={this.playersClick}>Players</Link>
+
+
+
 
     return(
       <div className="App">

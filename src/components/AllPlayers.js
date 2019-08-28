@@ -1,24 +1,18 @@
-import React from 'react'
-import Roster from './Roster'
+import React from 'react';
+import Roster from './Roster';
 
 
 
 const AllPlayers = (props) => {
-console.log('this is AllPlayers', props)
-
-
-let mappedRosters = props.roster.map((roster, i) => {
-  // console.log('this is AllPlayers', props.roster[i].roster.roster)
-  return (
-    <div>
-      <Roster
-        roster={roster.roster.roster}
-      />
-    </div>
-  )
-})
-
-
+  console.log(props)
+  let mappedRosters = props.roster.map((roster, i) => {
+    console.log(props.roster[i])
+    return (
+      <div>
+        <Roster details={props.roster[i].roster.roster} />
+      </div>
+    )
+  })
   return (
     <div>
       {mappedRosters}
@@ -26,14 +20,4 @@ let mappedRosters = props.roster.map((roster, i) => {
   )
 }
 
-
-
-
-
-
-
-
-
-
-
-export default AllPlayers
+export default AllPlayers;
