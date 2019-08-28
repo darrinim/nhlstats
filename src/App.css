@@ -112,15 +112,14 @@ h3 {
   color: white;
   text-shadow: 0.7px 0.7px black;
   border-radius: 5px;
-  /* display: flex; */
   justify-content: center;
   margin-top: 20px;
-  /* background-color: rgba(0,0,0,0.6); */
-  background-color: rgba(98,116,128,0.6);
   padding: 0 30px;
+  background-color: rgba(12,29,64,0.7);
+  /* display: flex; */
 }
 .SinglePlayerContainer:hover {
-  background-color: rgba(98,116,128,0.9);
+  background-color: rgba(98,116,128,0.5);
   transition: background-color, 0.5s;
 }
 .PlayerBio {
@@ -136,7 +135,7 @@ h3 {
   font-size: 18px;
 }
 .Button {
-  background-color: rgba(98,116,128,0.8);
+  background-color: rgba(0,0,0,0.7);
   padding: 10px 20px;
   color: white;
   font-size: 18px;
@@ -144,8 +143,12 @@ h3 {
   cursor: pointer;
 }
 .Button:hover {
-  background-color: rgba(98,116,128,1);
+  background-color: rgba(98,116,128,0.8);
   transition: background-color, 0.5s;
+}
+.PlayersAllContainer {
+  margin: 0 auto;
+  width: 40%;
 }
 body {
   background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1566913933/HockeyRink_az1pbn.jpg');
@@ -154,5 +157,8 @@ body {
   height: 100vh;
 }
 
+.allTeamsButton {
+  width: 60%;
+}
 
 @media (max-width: )

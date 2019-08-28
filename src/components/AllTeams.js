@@ -31,7 +31,7 @@ class AllTeams extends React.Component {
      )
    })
    const displaying = this.state.clicked && (
-       <div>
+       <div className='allTeamsButton'>
        <button
           className="Button"
          onClick={()=> this.handleClick()}

@@ -23,7 +23,7 @@ const [ currentPlayer, setCurrentPlayer ] = useState(null)
      )
    })
  return(
-   <div>
+   <div className="PlayersAllContainer">
     { currentPlayer ? <TeamPlayer player={currentPlayer.player} playerInfo={currentPlayer.playerInfo} stats={currentPlayer.stats} setCurrentPlayer={setCurrentPlayer}/> :
      mappedPlayer}
    </div>
