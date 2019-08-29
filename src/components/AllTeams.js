@@ -31,16 +31,15 @@ class AllTeams extends React.Component {
      )
    })
    const displaying = this.state.clicked && (
-       <div className='allTeamsButton'>
+       <div>
        <button
           className="Button"
-         onClick={()=> this.handleClick()}
-       >Back</button>
+         onClick={()=> this.handleClick()}>Back</button>
           <Roster details={this.state.roster.roster.roster} oneTeam={true} handleClick={this.handleClick}/>
        </div>
    )
    return (
-     <div className='TeamContainer'>
+     <div>
        {mappedTeamLink}
        {displaying}
      </div>

@@ -56,6 +56,7 @@ class TeamPlayer extends React.Component {
       {stats ?
         <div className="PlayerStats">
           <p className="BioStats">Player Stats</p>
+          <p>Games Played: {stats.games}</p>
           <p>Goals: {stats.goals}</p>
           <p>Assists: {stats.assists}</p>
           <p>Plus/Minus: {stats.plusMinus}</p>

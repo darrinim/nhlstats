@@ -54,6 +54,7 @@ class App extends React.Component {
     })
   }
 
+// could I possibly do a teamClick and a playerClick so that way when I click it again, I set a new state of cTeam and cPlayer to false and then it hides?
 
 
   render() {
