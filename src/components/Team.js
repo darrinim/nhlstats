@@ -8,7 +8,6 @@ class Team extends Component {
   }
 
   handleClick = () => {
-    // console.log(this.props.team.roster.roster)
     this.setState({
       roster: this.props.team.roster.roster,
       clicked: !this.state.clicked
@@ -25,14 +24,14 @@ class Team extends Component {
       <div>
         {this.props.team && (
           <>
-          <p
-            onClick = {this.handleClick}
-            className="TeamClick"
+            <p
+              onClick = {this.handleClick}
+              className="TeamClick"
             >
-            {this.props.team.name}
-          </p>
+              {this.props.team.name}
+            </p>
 
-          {roster}
+            {roster}
           </>
         )}
       </div>

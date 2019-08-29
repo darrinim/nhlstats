@@ -16,8 +16,6 @@ class AllTeams extends React.Component {
  }
 
  render() {
-   console.log(this.props)
-   console.log(this.state)
    const mappedTeamLink = this.state.clicked === false && this.props.teams.map((team) => {
      return (
        <div>
@@ -39,7 +37,7 @@ class AllTeams extends React.Component {
        </div>
    )
    return (
-     <div>
+     <div className="teamSelection">
        {mappedTeamLink}
        {displaying}
      </div>

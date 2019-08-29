@@ -17,7 +17,6 @@ class App extends React.Component {
 
   makeApiCallTeam = async () => {
     const response = await axios.get('http://statsapi.web.nhl.com/api/v1/teams?expand=team.roster')
-    // console.table(response.data.teams);
     this.setState({
       teams: response.data.teams,
       cTeams: true,
@@ -30,31 +29,16 @@ class App extends React.Component {
     this.makeApiCallTeam()
   }
 
-  // <Link
-  //   to="/allTeams"
-  //   className='Teams'
-  //   >Teams</Link>
-  //   <Link
-  //     to="/AllPlayers"
-  //     className='Players'
-  //     >Players</Link>
-
   teamsClick = () => {
-    // console.log(this.props.team.roster.roster)
-    console.log('teams clicked')
     this.setState({
       cPlayers: false
     })
   }
   playersClick = () => {
-    // console.log(this.props.team.roster.roster)
-    console.log('players clicked')
     this.setState({
       cTeams: false
     })
   }
-
-// could I possibly do a teamClick and a playerClick so that way when I click it again, I set a new state of cTeam and cPlayer to false and then it hides?
 
 
   render() {

@@ -5,7 +5,15 @@
   height: 100vh;
   overflow: auto;
 }
-
+body {
+  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1566913933/HockeyRink_az1pbn.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+p {
+  text-align: left;
+}
 h1 {
   font-family: 'montserrat';
   font-size: 5em;
@@ -19,14 +27,12 @@ h1 {
   font-style: italic;
 }
 h3 {
-  /* border: 1px solid white; */
   font-family: 'montserrat';
   font-size: 2.5em;
   color: white;
   text-shadow: 1px 1px black;
 }
 .homeContainer {
-  /* border: 1px solid white; */
   display: flex;
   flex-direction: column;
   background-color: rgba(0,0,0,0.5);
@@ -36,7 +42,6 @@ h3 {
 }
 .Teams {
   text-decoration: none;
-  /* border: 1px solid black; */
   height: 150px;
   line-height: 150px;
   color: white;
@@ -47,7 +52,6 @@ h3 {
 }
 .Players {
   text-decoration: none;
-  /* border: 1px solid black; */
   height: 150px;
   line-height: 150px;
   color: white;
@@ -64,7 +68,6 @@ h3 {
   transition: background-color, 0.5s;
 }
 .TeamClick {
-  border: 1px solid black;
   height: 80px;
   line-height: 80px;
   font-size: 1.5em;
@@ -72,7 +75,6 @@ h3 {
   margin: 10px auto;
   background-color: rgba(0,0,0,0.6);
   color: white;
-  cursor: pointer;
 }
 .TeamClick:hover {
   background-color: rgba(0,0,0,0.5);
@@ -81,15 +83,18 @@ h3 {
 .AllTeamSelect {
   text-decoration: none;
   color: white;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   height: 40px;
-  /* line-height: 40px; */
   padding: 0 15px;
   margin: 10px auto;
   cursor: pointer;
   width: 40%;
   background-color: rgba(12,29,64,0.7);
   max-width: 200px;
+}
+.AllTeamSelect:hover {
+  background-color: rgba(12,29,64,1);
+  transition: background-color, 0.5s;
 }
 
 .TeamContainer {
@@ -100,7 +105,6 @@ h3 {
   justify-content: center;
 }
 .SinglePlayer {
-  /* border: 1px solid; */
   color: white;
   text-shadow: 1px 1px black;
   padding: 5px;
@@ -109,7 +113,6 @@ h3 {
   cursor: pointer;
 }
 .SinglePlayerContainer {
-  /* border: 1px solid white; */
   color: white;
   text-shadow: 0.7px 0.7px black;
   border-radius: 5px;
@@ -117,18 +120,15 @@ h3 {
   margin-top: 20px;
   padding: 0 30px;
   background-color: rgba(12,29,64,0.7);
-  /* display: flex; */
 }
 .SinglePlayerContainer:hover {
   background-color: rgba(98,116,128,0.5);
   transition: background-color, 0.5s;
 }
 .PlayerBio {
-  border: 1px solid white;
   padding: 0 5px;
 }
 .PlayerStats {
-  border: 1px solid red;
   padding: 0 5px 5px 0;
 }
 .BioStats {
@@ -153,32 +153,21 @@ h3 {
   margin: 0 auto;
   width: 75%;
 }
-body {
-  background-image: url('https://res.cloudinary.com/darrin-im/image/upload/v1566913933/HockeyRink_az1pbn.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 100vh;
-}
-p {
-  text-align: left;
-}
-
 .allTeamsButton {
   width: 60%;
 }
 
+
+
 @media (min-width: 768px) {
-  body {
-    /* background-color: black; */
-  }
   .bioStatsContainer {
     display: flex;
-    border: 1px solid black;
     justify-content: space-around;
   }
   .SinglePlayerContainer {
     width: 60%;
     margin: 10px auto;
+    border: 1px solid black;
   }
   .PlayerStats {
     width: 40%;
