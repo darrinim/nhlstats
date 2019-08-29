@@ -38,7 +38,7 @@ class TeamPlayer extends React.Component {
         className="SinglePlayer"
         onClick={this.getPlayerAbout}
       >{player.person.fullName} <br/> {player.position.name}</div>
-
+<div className="bioStatsContainer">
       {playerInfo ?
         <div className="PlayerBio">
           <p className="BioStats">Player Bio</p>
@@ -68,6 +68,7 @@ class TeamPlayer extends React.Component {
         </div>
         : null
       }
+</div>
       </div>
     )
   }
