@@ -21,10 +21,9 @@ My project will be an application that lists hockey statistics for teams and pla
 ### MVP/PostMVP
 #### MVP
 - Pull and render data from the NHL API
-- Display team stats for every year
-- Wins/Loss/OT, Points, Conference, Division, Team Roster
-- Display player stats for every year
-- Goals, Assists, +/-, Games Played, Shots, Time On Ice, Blocked Shots, Hits
+- Display team player stats
+- Display player stats
+- Games Played, Goals, Assists, +/-, Games Played, Shots, Time On Ice, Blocked Shots, Hits
 
 #### PostMVP
 - Include photos of each player

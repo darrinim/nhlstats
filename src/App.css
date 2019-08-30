@@ -83,7 +83,6 @@ h3 {
 .AllTeamSelect {
   text-decoration: none;
   color: white;
-  /* border: 1px solid black; */
   height: 40px;
   padding: 0 15px;
   margin: 10px auto;
@@ -122,8 +121,8 @@ h3 {
   background-color: rgba(12,29,64,0.7);
 }
 .SinglePlayerContainer:hover {
-  background-color: rgba(98,116,128,0.5);
   transition: background-color, 0.5s;
+  background-color: rgba(0,0,0,0.8);
 }
 .PlayerBio {
   padding: 0 5px;
